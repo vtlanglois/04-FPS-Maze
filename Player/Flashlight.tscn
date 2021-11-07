@@ -31,11 +31,13 @@ material = SubResource( 2 )
 [node name="On" type="AudioStreamPlayer3D" parent="CSGCombiner/Handle/Button"]
 transform = Transform( -71.4286, -1.339e-05, 1.24475e-06, 3.95826e-06, -61.9831, 50.5773, -2.27302e-06, 38.3163, 46.957, 3.33638, 3.93367, 0.494283 )
 stream = ExtResource( 1 )
+unit_db = 1.0
 pitch_scale = 0.8
 
 [node name="Off" type="AudioStreamPlayer3D" parent="CSGCombiner/Handle/Button"]
 transform = Transform( -71.4286, -1.339e-05, 1.24475e-06, 3.95826e-06, -61.9831, 50.5773, -2.27302e-06, 38.3163, 46.957, 3.33638, 3.93367, 0.494283 )
 stream = ExtResource( 2 )
+unit_db = 1.0
 pitch_scale = 0.8
 
 [node name="Head" type="CSGCylinder" parent="CSGCombiner"]
@@ -57,3 +59,5 @@ spot_angle = 31.063
 transform = Transform( 2.48435e-08, 1.31134e-07, -1, 4.37114e-08, -1, -1.31134e-07, -1, -4.37114e-08, -2.48435e-08, 0.0285708, -0.0886759, 0.129716 )
 light_energy = 5.46
 omni_range = 0.180335
+
+[node name="Tween" type="Tween" parent="."]
