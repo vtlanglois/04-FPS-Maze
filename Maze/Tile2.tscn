@@ -1,12 +1,14 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Maze/Ground.tres" type="Material" id=1]
+[ext_resource path="res://Assets/stone_wall.png" type="Texture" id=2]
 
 [sub_resource type="CubeMesh" id=1]
 size = Vector3( 0.1, 2, 2 )
 
 [sub_resource type="SpatialMaterial" id=2]
 albedo_color = Color( 0.286275, 0.313726, 0.341176, 1 )
+albedo_texture = ExtResource( 2 )
 
 [sub_resource type="BoxShape" id=3]
 extents = Vector3( 0.05, 1, 1 )

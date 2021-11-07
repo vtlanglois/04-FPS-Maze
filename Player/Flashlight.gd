@@ -6,7 +6,7 @@ onready var Flashlight_Button = $CSGCombiner/Handle/Button
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	pass
 
 func _unhandled_input(event):
 	if Input.is_action_pressed("click") && Spotlight.visible == true:
@@ -19,7 +19,8 @@ func _unhandled_input(event):
 		Spotlight.get_node("Detail").show()
 		Flashlight_Button.set_operation(CSGShape.OPERATION_SUBTRACTION);
 		Flashlight_Button.get_node("On").play()
-		
+	var position = Vector3()
+	
 
 func _process(delta):
 	pass
