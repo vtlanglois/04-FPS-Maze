@@ -17,13 +17,13 @@ dest_files=[ "res://.import/grass.jpg-a807c661017f5cb8ef8de151216c8350.s3tc.stex
 [params]
 
 compress/mode=2
-compress/lossy_quality=1.0
+compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=true
-flags/filter=false
-flags/mipmaps=false
+flags/filter=true
+flags/mipmaps=true
 flags/anisotropic=false
 flags/srgb=1
 process/fix_alpha_border=true

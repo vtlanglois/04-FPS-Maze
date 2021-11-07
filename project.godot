@@ -14,14 +14,13 @@ _global_script_class_icons={
 
 [application]
 
-config/name="04-FPS Maze"
+config/name="Procedural Generation"
 run/main_scene="res://Maze/Maze.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
 Global="*res://Global.gd"
-Music="*res://Music.tscn"
 
 [input]
 
