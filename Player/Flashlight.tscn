@@ -1,0 +1,59 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Assets/flashlight_on.mp3" type="AudioStream" id=1]
+[ext_resource path="res://Assets/flashlight_off.mp3" type="AudioStream" id=2]
+[ext_resource path="res://Player/Flashlight.gd" type="Script" id=3]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 1, 0, 0, 1 )
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 0.639216, 0.611765, 0.611765, 1 )
+
+[node name="Flashlight" type="Spatial"]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )
+script = ExtResource( 3 )
+
+[node name="CSGCombiner" type="CSGCombiner" parent="."]
+
+[node name="Handle" type="CSGCylinder" parent="CSGCombiner"]
+transform = Transform( -4.37114e-09, -0.28, 0, 0.1, -1.22392e-08, 0, 0, 0, 0.1, 0, 0, 0 )
+material = SubResource( 1 )
+
+[node name="Button" type="CSGCylinder" parent="CSGCombiner/Handle"]
+transform = Transform( -5.13386e-09, -0.193698, 0.208632, 0.1, -1.09279e-08, 9.11961e-09, 6.22371e-10, 0.158055, 0.255681, 0.658821, -0.333638, -0.748115 )
+operation = 2
+material = SubResource( 2 )
+
+[node name="On" type="AudioStreamPlayer3D" parent="CSGCombiner/Handle/Button"]
+transform = Transform( -71.4286, -1.339e-05, 1.24475e-06, 3.95826e-06, -61.9831, 50.5773, -2.27302e-06, 38.3163, 46.957, 3.33638, 3.93367, 0.494283 )
+stream = ExtResource( 1 )
+pitch_scale = 0.8
+
+[node name="Off" type="AudioStreamPlayer3D" parent="CSGCombiner/Handle/Button"]
+transform = Transform( -71.4286, -1.339e-05, 1.24475e-06, 3.95826e-06, -61.9831, 50.5773, -2.27302e-06, 38.3163, 46.957, 3.33638, 3.93367, 0.494283 )
+stream = ExtResource( 2 )
+pitch_scale = 0.8
+
+[node name="Head" type="CSGCylinder" parent="CSGCombiner"]
+transform = Transform( -5.24537e-09, -0.25, 0, 0.12, -1.09278e-08, 0, 0, 0, 0.12, 0.26957, 0, 0 )
+material = SubResource( 3 )
+
+[node name="Lightbulb" type="CSGSphere" parent="CSGCombiner/Head"]
+transform = Transform( 0.6, -3.55271e-15, 0, 0, 0.6, 0, 0, 0, 0.6, -3.10814e-08, -0.426635, 0 )
+operation = 2
+
+[node name="Spotlight" type="SpotLight" parent="CSGCombiner/Head"]
+transform = Transform( 2.18557e-06, -16.6667, -3.63798e-12, -1.98748e-07, -2.84217e-14, 8, -16.6667, -2.18557e-06, -4.14058e-07, 0.336695, 0.32324, 2.74221e-08 )
+light_energy = 5.0
+light_specular = 0.32
+spot_range = 6.95514
+spot_angle = 31.063
+
+[node name="Detail" type="OmniLight" parent="CSGCombiner/Head/Spotlight"]
+transform = Transform( 2.48435e-08, 1.31134e-07, -1, 4.37114e-08, -1, -1.31134e-07, -1, -4.37114e-08, -2.48435e-08, 0.0285708, -0.0886759, 0.129716 )
+light_energy = 5.46
+omni_range = 0.180335

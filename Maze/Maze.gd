@@ -35,7 +35,7 @@ var tiles = [
 
 var tile_size = 2
 var width = 20  # width of map (in tiles)
-var height = 12  # height of map (in tiles)
+var height = 20  # height of map (in tiles)
 
 func _ready():
 	randomize()
@@ -81,3 +81,6 @@ func make_maze():
 			tile.translation = Vector3(x*tile_size,0,z*tile_size)
 			tile.name = "Tile_" + str(x) + "_" + str(z)
 			add_child(tile)
+
+
+

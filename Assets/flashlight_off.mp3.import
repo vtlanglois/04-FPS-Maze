@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/flashlight_off.mp3-e5f5be279717c90a48160bfef2dc9c3e.mp3str"
+
+[deps]
+
+source_file="res://Assets/flashlight_off.mp3"
+dest_files=[ "res://.import/flashlight_off.mp3-e5f5be279717c90a48160bfef2dc9c3e.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
