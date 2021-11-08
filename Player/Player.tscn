@@ -41,14 +41,14 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0 )
 current = true
 
 [node name="Flashlight" parent="Pivot/Camera" instance=ExtResource( 3 )]
-transform = Transform( -1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, 0.0644726, -0.221517, -0.417391 )
+transform = Transform( -1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, 0.0644726, -0.221517, -0.337575 )
 
 [node name="Walk" type="AudioStreamPlayer3D" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0445046, 0.354964, -0.806907 )
 stream = ExtResource( 2 )
 unit_db = 1.0
-max_db = 1.5
-max_distance = 1.0
+max_db = 1.0
+max_distance = 10.0
 emission_angle_degrees = 47.8
 emission_angle_filter_attenuation_db = -10.5
 

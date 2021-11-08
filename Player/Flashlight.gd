@@ -9,12 +9,12 @@ func _ready():
 	pass
 
 func _unhandled_input(event):
-	if Input.is_action_pressed("click") && Spotlight.visible == true:
+	if Input.is_action_just_pressed("click") && Spotlight.visible == true:
 		Spotlight.hide()
 		Spotlight.get_node("Detail").show()
 		Flashlight_Button.set_operation(CSGShape.OPERATION_UNION)
 		Flashlight_Button.get_node("On").play()
-	elif Input.is_action_pressed("click") && Spotlight.visible == false:
+	elif Input.is_action_just_pressed("click") && Spotlight.visible == false:
 		Spotlight.show()
 		Spotlight.get_node("Detail").show()
 		Flashlight_Button.set_operation(CSGShape.OPERATION_SUBTRACTION);

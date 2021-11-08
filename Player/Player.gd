@@ -25,6 +25,10 @@ func get_input():
 	if Input.is_action_pressed("right"):
 		input_dir += Camera.global_transform.basis.x
 	input_dir = input_dir.normalized()
+	if Input.is_action_just_pressed("spawn") and !$Debug.current:
+		$Debug.current = true;
+	elif Input.is_action_just_pressed("spawn") and $Debug.current:
+		$Debug.current = false;
 	return input_dir
 
 func _unhandled_input(event):
