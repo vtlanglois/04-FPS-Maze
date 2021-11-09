@@ -48,7 +48,6 @@ operation = 2
 
 [node name="Spotlight" type="SpotLight" parent="CSGCombiner/Head"]
 transform = Transform( 2.18557e-06, -16.6667, -3.63798e-12, -1.98748e-07, -2.84217e-14, 8, -16.6667, -2.18557e-06, -4.14057e-07, 0.336695, -1.1398, 1.03145e-07 )
-light_color = Color( 1, 0, 0, 1 )
 light_energy = 5.0
 light_indirect_energy = 5.0
 light_specular = 0.15
@@ -58,7 +57,6 @@ spot_angle = 60.0
 
 [node name="Detail" type="OmniLight" parent="CSGCombiner/Head/Spotlight"]
 transform = Transform( 2.48435e-08, 1.31134e-07, -1, 4.37114e-08, -1, -1.31134e-07, -1, -4.37114e-08, -2.48435e-08, 0.0285708, -0.0886759, -0.0312074 )
-light_color = Color( 1, 0, 0, 1 )
 light_energy = 5.46
 shadow_enabled = true
 omni_range = 2.0

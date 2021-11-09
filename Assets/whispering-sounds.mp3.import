@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/whispering-sounds.mp3-000b04ea5397c2d90bae2a6d775825da.mp3str"
+
+[deps]
+
+source_file="res://Assets/whispering-sounds.mp3"
+dest_files=[ "res://.import/whispering-sounds.mp3-000b04ea5397c2d90bae2a6d775825da.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
