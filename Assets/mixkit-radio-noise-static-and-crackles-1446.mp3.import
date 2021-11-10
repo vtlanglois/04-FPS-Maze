@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/mixkit-radio-noise-static-and-crackles-1446.mp3-253f0771e74e4fda0960f45912b99ee3.mp3str"
+
+[deps]
+
+source_file="res://Assets/mixkit-radio-noise-static-and-crackles-1446.mp3"
+dest_files=[ "res://.import/mixkit-radio-noise-static-and-crackles-1446.mp3-253f0771e74e4fda0960f45912b99ee3.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
