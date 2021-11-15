@@ -2,19 +2,19 @@
 
 [ext_resource path="res://Enemy/Enemy.gd" type="Script" id=1]
 [ext_resource path="res://Enemy/Enemy.tres" type="SphereMesh" id=2]
-[ext_resource path="res://Assets/whispering-sounds.mp3" type="AudioStream" id=3]
+[ext_resource path="res://Assets/mixkit-male-crowd-whispering-voices-455.mp3" type="AudioStream" id=3]
 [ext_resource path="res://Assets/mixkit-radio-noise-static-and-crackles-1446.mp3" type="AudioStream" id=4]
 
 [sub_resource type="CapsuleShape" id=1]
-radius = 0.377232
+radius = 0.460137
 height = 0.002
 
 [sub_resource type="CapsuleShape" id=2]
-radius = 0.376845
+radius = 0.288481
 height = 0.002
 
 [node name="Enemy" type="KinematicBody"]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1.26884, 0 )
+transform = Transform( 0.33, 0, 0, 0, 0.33, 0, 0, 0, 0.33, 0, 1.67735, 0 )
 script = ExtResource( 1 )
 
 [node name="Area" type="Area" parent="."]
@@ -55,3 +55,5 @@ spot_angle = 65.0
 stream = ExtResource( 4 )
 autoplay = true
 max_distance = 4.0
+
+[connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]

@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Item/Item.gd" type="Script" id=1]
+
+[sub_resource type="SpatialMaterial" id=1]
+metallic = 1.0
+roughness = 0.0
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.31342, 0.373139, 0.313865 )
+
+[node name="Item" type="Area"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.00726, 0.946448, 0 )
+script = ExtResource( 1 )
+
+[node name="CSGBox" type="CSGBox" parent="."]
+transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0 )
+material = SubResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0 )
+shape = SubResource( 2 )
+
+[connection signal="body_entered" from="." to="." method="_on_Item_body_entered"]

@@ -3,7 +3,7 @@ extends KinematicBody
 
 var Player = null;
 
-var move_speed = 100
+var move_speed = 25
 
 func _physics_process(delta):
 	if Player == null:
@@ -29,3 +29,8 @@ func _process(delta):
 # multiply by our move speed and by delta
 
 		move_and_slide(offset.normalized() * move_speed * delta)
+
+
+func _on_Area_body_entered(body):
+	if(body.name == "Player"):
+		get_tree().change_scene("res://UI/EndMenu.tscn")

@@ -9,6 +9,9 @@ var max_speed = 8
 var mouse_sensitivity = 0.015
 var mouse_range = 1.2
 
+export var itemCount = 0;
+
+
 var velocity = Vector3()
 
 func _ready(): 
@@ -59,5 +62,8 @@ func _physics_process(delta):
 			$Walk.play()
 	elif $Walk.is_playing():
 		$Walk.stop()
+	if (Global.itemCount >= 4):
+		get_tree().change_scene("res://UI/WinScreen.tscn")
+	
 
 
